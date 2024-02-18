@@ -23,11 +23,6 @@ const connection = mysql.createConnection({
 app.get("/", (req, res) => {
   connection.connect((err) => {
     connection.query('SELECT * FROM Product', (err, results) => {
-      if (err) {
-        console.error('Error executing query:', err);
-        connection.end();
-        return res.status(500).send('Internal Server Error');
-      }
 
       let queryResults = results.map(result => ({
         Product: result.ProductName,
