@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Transactions</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table input[type="text"],
+table input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+table input[type="text"]:focus,
+table input[type="tel"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+table button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+table button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+
+        <body>
+        <h1>Shop Transactions</h1>
+            <table>
+                <tbody>
+                    <% transactions.forEach(transaction => { %>
+                <tr>
+                    <td>Transaction ID</td>
+                    <td><%= transaction.transactionID %></td>
+                </tr>
+                <tr>
+                    <td>NAME</td>
+                    <td><%= transaction.name %></td>
+                </tr>
+                <tr>
+                    <td>FACEBOOK</td>
+                    <td><%= transaction.facebook %></td>
+                </tr>
+                <tr>
+                    <td>NUMBER</td>
+                    <td><%= transaction.number %></td>
+                </tr>
+                <tr>
+                    <td>FLAVOR OF THE CAKE</td>
+                    <td><%= transaction.flavor %></td>
+                </tr>
+                <tr>
+                    <td>DESIGN OF THE CAKE</td>
+                    <td><%= transaction.design %></td>
+                </tr>
+                <tr>
+                    <td>SIZE OF THE CAKE</td>
+                    <td><%= transaction.size %></td>
+                </tr>
+                <tr>
+                    <td>DEDICATION</td>
+                    <td><%= transaction.dedication %></td>
+                </tr>
+                <tr>
+                    <td>ADD-ONS</td>
+                    <td><%= transaction.addons %></td>
+                </tr>
+                <tr>
+                    <td>SPECIAL INSTRUCTION</td>
+                    <td><%= transaction.instruction %></td>
+                </tr>
+                <tr>
+                    <td>BREAD</td>
+                    <td><%= transaction.bread %></td>
+                </tr>
+                <tr>
+                    <td>CUPCAKES</td>
+                    <td><%= transaction.cupcakes %></td>
+                </tr>
+                <tr>
+                    <td>PASTRIES</td>
+                    <td><%= transaction.pastries %></td>
+                </tr>
+                <tr>
+                    <td>MODE OF PAYMENT</td>
+                    <td><%= transaction.payment %></td>
+                </tr>
+                <tr>
+                    <td>DELIVERY OR PICK UP</td>
+                    <td><%= transaction.delivery %></td>
+                </tr>
+                <tr>
+                    <td>DATE OF PICK UP</td>
+                    <td><%= transaction.pickup_date %></td>
+                </tr>
+                <tr>
+                    <td>TIME OF PICK UP</td>
+                    <td><%= transaction.pickup_time %></td>
+                </tr>
+                <tr>
+                    <td>LOCATION OF DELIVERY</td>
+                    <td><%= transaction.delivery_location %></td>
+                </tr>
+                     <% }); %>
+                </tbody>
+            </table>
+        </body>
+</html>
+
+
+
