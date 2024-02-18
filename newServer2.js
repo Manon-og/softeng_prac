@@ -14,10 +14,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 const connection = mysql.createConnection({
-  host: '127.0.0.1',
-  user: 'root',
-  password: 'wakoyuyab',
-  database: 'SoftEng'
+  host: '________',
+  user: '_____',
+  password: '________',
+  database: '_______'
 });
 
 app.get("/", (req, res) => {
